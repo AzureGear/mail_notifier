@@ -1,0 +1,13 @@
+check_interval: 60
+default_sounds: false
+icon_error: (128, 128, 128, 255)
+icon_read: (0, 160, 255, 255)
+icon_unread: (155, 20, 115, 255)
+mailboxes:
+- email: test_email_notifier@inbox.lt
+  folder: INBOX
+  host: mail.inbox.lt
+  username: test_email_notifier@inbox.lt
+  web_url: https://email.inbox.lt/mailbox
+sound_enabled: true
+sound_notification: ring.wav

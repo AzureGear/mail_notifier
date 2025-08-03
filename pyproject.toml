@@ -1,0 +1,36 @@
+[project]
+name = "mail-notifier"
+version = "0.1.0"
+description = "Lightweight IMAP email tray notifier"
+authors = [
+    {name = "AzureGear",email = "celestial.azura@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.9,<3.14"
+dependencies = [
+    "imapclient (>=3.0.1,<4.0.0)",
+    "plyer (>=2.1.0,<3.0.0)",
+    "pystray (>=0.19.5,<0.20.0)",
+    "pyyaml (>=6.0.2,<7.0.0)",
+    "python-dotenv (>=1.1.1,<2.0.0)",
+    "keyring (>=25.6.0,<26.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+mail-notifier = "main:main"
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = "^6.14.2"
+pytest = "^8.4.1"
+pytest-mock = "^3.12.0"
+pytest-cov = "^4.1.0"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+addopts = "--verbose --cache-clear --cov=src --cov-report=term-missing"
